@@ -1,35 +1,3 @@
-# LeviLamina Mod Template
+# PowerAssociationMapLeakFix
 
-A LeviLamina mod template
-
-This mod is a template for developing LeviLamina mods.
-
-## Install
-
-Generate a new repository from this template.
-
-## Usage
-
-Before using this mod template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
-
-1. Clone the new repository into a local folder.
-
-1. Change the mod name and the expected LeviLamina version in `xmake.lua`.
-
-1. Add your code.
-
-1. Run `xmake repo -u` in the root of the repository.
-
-1. Run `xmake` to build the mod.
-
-Now the build is complete at `bin/`.
-
-## Contributing
-
-Ask questions by creating an issue.
-
-PRs accepted.
-
-## License
-
-CC0-1.0 © LiteLDev
+在基岩版红石系统中，有一个叫做 PowerAssociationMap 的对象用于记录元件以及其(可能)被其激活的元件，然而这个容器存在资源泄露问题，导致被激活元件移除时，该容器未能移除对应元件，除了增加占用，还会在部分情况下造成巨量卡顿。本插件用于修复这个问题。
