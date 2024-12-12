@@ -1,15 +1,17 @@
 #pragma once
 
+#include <span>
+
 #include "ll/api/mod/NativeMod.h"
 
-namespace my_mod {
+namespace pa_map_fix {
 
-class MyMod {
+class PowerAssociationMapLeakFix {
 
 public:
-    static MyMod& getInstance();
+    static PowerAssociationMapLeakFix& getInstance();
 
-    MyMod(ll::mod::NativeMod& self) : mSelf(self) {}
+    PowerAssociationMapLeakFix(ll::mod::NativeMod& self) : mSelf(self) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
