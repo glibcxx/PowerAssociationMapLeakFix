@@ -8,9 +8,9 @@
         "author": "glibcxx",
         "tags": ["levilamina", "mod"]
     },
-    "asset_url": "My Asset Url",
+    "asset_url": "https://github.com/glibcxx/PowerAssociationMapLeakFix/releases/download/v0.1.0/PowerAssociationMapLeakFix-windows-x64.zip",
     "prerequisites": {
-        "github.com/LiteLDev/LeviLamina": "My LeviLamina Dependency Version"
+        "github.com/LiteLDev/LeviLamina": ">=0.13.4"
     },
     "files": {
         "place": [
