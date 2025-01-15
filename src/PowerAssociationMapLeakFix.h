@@ -11,7 +11,7 @@ class PowerAssociationMapLeakFix {
 public:
     static PowerAssociationMapLeakFix& getInstance();
 
-    PowerAssociationMapLeakFix(ll::mod::NativeMod& self) : mSelf(self) {}
+    PowerAssociationMapLeakFix() : mSelf(*ll::mod::NativeMod::current()) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -32,4 +32,4 @@ private:
     ll::mod::NativeMod& mSelf;
 };
 
-} // namespace my_mod
+} // namespace pa_map_fix

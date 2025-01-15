@@ -9,9 +9,10 @@
 
 namespace pa_map_fix {
 
-static std::unique_ptr<PowerAssociationMapLeakFix> instance;
-
-PowerAssociationMapLeakFix& PowerAssociationMapLeakFix::getInstance() { return *instance; }
+PowerAssociationMapLeakFix& PowerAssociationMapLeakFix::getInstance() {
+    static PowerAssociationMapLeakFix instance;
+    return instance;
+}
 
 bool PowerAssociationMapLeakFix::load() {
     getSelf().getLogger().debug("Loading...");
@@ -57,4 +58,4 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
 
 } // namespace pa_map_fix
 
-LL_REGISTER_MOD(pa_map_fix::PowerAssociationMapLeakFix, pa_map_fix::instance);
+LL_REGISTER_MOD(pa_map_fix::PowerAssociationMapLeakFix, pa_map_fix::PowerAssociationMapLeakFix::getInstance());
